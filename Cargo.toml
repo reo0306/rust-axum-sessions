@@ -1,0 +1,24 @@
+[package]
+name = "axum-session"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+async-trait = "0.1.74"
+axum = { version = "0.7.5",  features = ["multipart", "macros"] }
+axum-login = "0.15.3"
+axum-messages = "0.6.0"
+http = "1.0.0"
+password-auth = "1.0.0"
+serde = "1.0"
+sqlx = { version = "0.8.0", features = ["sqlite", "time", "runtime-tokio-native-tls", "migrate"] }
+time = "0.3.30"
+tokio = { version = "1.34.0", features = ["full"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"]}
+tower-sessions = { version = "0.12.0", features = ["signed"]}
+tower-sessions-sqlx-store = { version = "0.13.0", features = ["sqlite"]}
+thiserror = "1.0.56"
